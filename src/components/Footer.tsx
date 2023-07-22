@@ -6,7 +6,7 @@ import "stylesheets/Footer.scss";
 export default function Footer() {
     const { timerId } = useSelector((state: State) => state.time);
     return (
-        <div className={`bottom-area ${timerId ? "hidden" : ""}`}>
+        <div className="bottom-area">
             <span className="hint">
                 <kbd>Ctrl</kbd> + <kbd>k</kbd> to open command pallet
             </span>
@@ -14,7 +14,7 @@ export default function Footer() {
                 <kbd>Tab</kbd> to restart test
             </span>
             <footer>
-                <span>
+                <span className={`${timerId ? "hidden" : ""}`}>
                     created by{" "}
                     <a
                         target="_blank"
